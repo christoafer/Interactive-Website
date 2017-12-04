@@ -6,11 +6,20 @@ class Bubble{
   show(){
     ellipse(this.x, this.y, 10);
 }
-  move(){
+  move(){  //495-30= 465, 495+30= 525, 590-20= 570, 590+20= 610
     this.x = this.x + random(-1, 1);
-    this.y = this.x + random(-1, 1);
+    this.y = this.y + random(-1, 1);
+    if (this.x < 483 || this.y < 580){
+      this.x = 495;
+      this.y = 590;
+    }
+    if (this.x > 505 || this.y > 600){
+      this.x = 495;
+      this.y = 590;
+    }
   }
  }
+
 
 var canvas;
 var button;
@@ -24,12 +33,12 @@ var wordsWhy = [" ", "Addictive video games have no pre-defined ends, causing th
 "Video games can be addictive because of the variable rewarding systems. A certain number of tasks or points must be reached before the player is rewarded. However, the player doesn’t know when the requirements for the reward is fulfilled, causing them to play until they’ve received the reward."
 ]
 var index = 0;
-var indexWhy = 0;
 var bubble1;
 var bubble2;
 var bubble3;
 var bubble4;
 var bubble5;
+
 
 function setup(){
   canvas = createCanvas(windowWidth, windowHeight*2);
@@ -54,7 +63,8 @@ background(175);
   text(wordsWhy[index], 10, 650)
   noFill();
   ellipse(500, 600, 80);
-  ellipse(495, 590, 60, 40); // brain
+  ellipse(495, 590, 60, 40); // brain  495-30= 465, 495+30= 525, 590-20= 570, 590+20= 610
+  //ellipse(495, 590, 50, 30); //
   line(538, 590, 548, 620);
   line(548, 620, 535, 620)
   if (index == 0) {
@@ -139,14 +149,14 @@ background(175);
     bubble5.show();
   }
   if (index > 5){
-    index = 0
+    index == 0;
   }
 }
 
 function changeBG(){
   clear();
   index = index + 1;
-  indexWhy = indexWhy +1;
+  //indexWhy = indexWhy +1;
 }
 
 function windowResized(){
