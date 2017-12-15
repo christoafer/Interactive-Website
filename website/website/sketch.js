@@ -165,7 +165,7 @@ function changeBG(){
 }
 
 function changeBG2(){
-myLink = createA('https://christoafer.github.io/video-game/ball/');
+myLink = createA('https://christoafer.github.io/video-game/ball/','Try This Game');
  console.log("clicked");
 }
 
