@@ -49,7 +49,7 @@ function setup(){
   button2 = createButton('Here is an example of a video game that you might find interestingly attractive');
   button.position(200, 550);
   button.mousePressed(changeBG);
-  button2.position(20, 800);
+  button2.position(20, 750);
   button2.mousePressed(changeBG2);
   bubble1 = new Bubble();
   bubble2 = new Bubble();
