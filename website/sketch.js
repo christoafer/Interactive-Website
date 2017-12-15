@@ -23,6 +23,7 @@ class Bubble{
 
 var canvas;
 var button;
+var button2;
 var words = ["Click to find out why video games can become addictive", "1. No pre-defined ends",
  "2. Rewards are based on a leveling system", "3. In-game currency", "4. Video games are considered harmless",
  "5. Rewards are set on variable schedules"];
@@ -45,8 +46,11 @@ function setup(){
   canvas.position(0,0);
   canvas.style('z-index', '-1');
   button = createButton('click me');
+  button2 = createButton('Here is an example of a video game that you might find interestingly attractive');
   button.position(200, 550);
   button.mousePressed(changeBG);
+  button2.position(20, 800);
+  button2.mousePressed(changeBG2);
   bubble1 = new Bubble();
   bubble2 = new Bubble();
   bubble3 = new Bubble();
@@ -157,6 +161,11 @@ function changeBG(){
   clear();
   index = index + 1;
   //indexWhy = indexWhy +1;
+}
+
+function changeBG2(){
+'https://christoafer.github.io/video-game/ball/'
+ console.log("clicked");
 }
 
 function windowResized(){
